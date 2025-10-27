@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #FFD4A3 0%, #FFB88C 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #FFE5E5 0%, #FFB3D1 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #0077FF;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+.estimate-form {
+    padding: 40px;
+}
+
+.form-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #FF9872;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 1em;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #FFB88C;
+    box-shadow: 0 0 0 3px rgba(255, 184, 140, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px 25px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    flex: 1;
+    min-width: 150px;
+    justify-content: center;
+}
+
+.radio-option:hover {
+    border-color: #FFB88C;
+    background: #FFF5E6;
+}
+
+.radio-option input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom {
+    border-color: #FFB88C;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #FFB88C;
+    border-radius: 50%;
+}
+
+.radio-label {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+/* チェックボックススタイル */
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px 25px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    justify-content: flex-start;
+}
+
+.checkbox-option:hover {
+    border-color: #FFB88C;
+    background: #FFF5E6;
+}
+
+.checkbox-option input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ddd;
+    border-radius: 6px;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.checkbox-option input[type="checkbox"]:checked + .checkbox-custom {
+    border-color: #FFB88C;
+    background: #FFB88C;
+}
+
+.checkbox-option input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.checkbox-label {
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #FFD4A3 0%, #FFB88C 100%);
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 184, 140, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 184, 140, 0.6);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* モーダル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h3 {
+    color: #FF9872;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.confirmation-data {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.confirmation-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.confirmation-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.confirmation-item strong {
+    color: #FF9872;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.modal-btn {
+    background: linear-gradient(135deg, #FFD4A3 0%, #FFB88C 100%);
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 184, 140, 0.4);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .estimate-form {
+        padding: 20px;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+    }
+    
+    .radio-option {
+        min-width: 100%;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+    }
+}

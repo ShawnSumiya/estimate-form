@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web制作フォーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web制作フォーム</h1>
+            <p class="subtitle">ご希望や要件をお聞かせください。確認が出来次第ご返信いたします。</p>
+        </header>
+
+        <form id="estimateForm" class="estimate-form">
+            <!-- 個人/グループ選択 -->
+            <section class="form-section">
+                <h2>お客様タイプ</h2>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="clientType" value="個人" required>
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">個人</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="clientType" value="グループ">
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">グループ</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- 基本情報 -->
+            <section class="form-section">
+                <h2>基本情報</h2>
+                
+                <div class="form-group">
+                    <label for="name">お名前 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                </div>
+
+                <div class="form-group">
+                    <label for="lineName">LINE名 <span class="required">*</span></label>
+                    <input type="text" id="lineName" name="lineName" required placeholder="オープンチャットのお名前">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="example@email.com">
+                </div>
+            </section>
+
+            <!-- Web制作内容 -->
+            <section class="form-section">
+                <h2>Web制作について</h2>
+                
+                <div class="form-group">
+                    <label for="webpageType">どのようなWebページを作成したいですか？ <span class="required">*</span></label>
+                    <textarea id="webpageType" name="webpageType" rows="4" required placeholder="例：アイドル、バンド、個人のサイトなど"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="requests">ご要望・その他</label>
+                    <textarea id="requests" name="requests" rows="5" placeholder="デザインに関するご質問やご要望、機能要件など、なんでもご記入ください"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-option">
+                        <input type="checkbox" id="lineFriend" name="lineFriend" value="済" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-label">LINEの友達追加はお済みですか？ <span class="required">*</span></span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- 送信ボタン -->
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">見積もりを依頼する</button>
+            </div>
+        </form>
+
+        <!-- 送信確認モーダル -->
+        <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <h3>見積もり依頼が完了しました</h3>
+                <div id="confirmationData" class="confirmation-data"></div>
+                <button class="modal-btn" onclick="closeModal()">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
