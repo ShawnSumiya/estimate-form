@@ -19,7 +19,7 @@
                 <h2>お客様タイプ</h2>
                 <div class="radio-group">
                     <label class="radio-option">
-                        <input type="radio" name="clientType" value="個人" required>
+                        <input type="radio" name="clientType" value="個人">
                         <span class="radio-custom"></span>
                         <span class="radio-label">個人</span>
                     </label>
@@ -67,29 +67,30 @@
 
                 <div class="form-group">
                     <label class="checkbox-option">
-                        <input type="checkbox" id="lineFriend" name="lineFriend" value="済" required>
+                        <input type="checkbox" id="lineFriend" name="lineFriend" value="済">
                         <span class="checkbox-custom"></span>
                         <span class="checkbox-label">LINEの友達追加はお済みですか？ <span class="required">*</span></span>
                     </label>
+                    <input type="text" id="lineFriendValidator" style="position: absolute; opacity: 0; pointer-events: none; width: 1px; height: 1px;">
                 </div>
             </section>
 
             <!-- 送信ボタン -->
             <div class="form-actions">
-                <button type="submit" class="submit-btn">見積もりを依頼する</button>
+                <button type="submit" class="submit-btn">フォームを送信する</button>
             </div>
         </form>
 
         <!-- 送信確認モーダル -->
         <div id="confirmModal" class="modal">
             <div class="modal-content">
-                <h3>見積もり依頼が完了しました</h3>
+                <h3>フォームが送信されました</h3>
                 <div id="confirmationData" class="confirmation-data"></div>
                 <button class="modal-btn" onclick="closeModal()">閉じる</button>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
