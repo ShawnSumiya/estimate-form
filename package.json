@@ -1,0 +1,17 @@
+{
+  "name": "web-estimate-form",
+  "version": "1.0.0",
+  "description": "Web制作の見積もり依頼フォーム",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Static site - open index.html in browser'"
+  },
+  "keywords": [
+    "web",
+    "estimate",
+    "form"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
